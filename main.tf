@@ -4,7 +4,7 @@ provider "google" {
 
 resource "google_secret_manager_secret" "secret-basic" {
   secret_id = "secret-wf-google-tf"
-  project      = "manifest-access-320809
+  project      = "manifest-access-320809"
 
 "
 
