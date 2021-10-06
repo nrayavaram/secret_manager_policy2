@@ -4,6 +4,7 @@ provider "google" {
 
 resource "google_secret_manager_secret" "secret-basic" {
   secret_id = "secret-wf-google-tf"
+  project      = "nice-symbol-249617"
 
   labels = {
     label = "my-label2"
