@@ -15,7 +15,7 @@ resource "google_secret_manager_secret" "secret-basic" {
         location = "us-central1"
       }
       replicas {
-        location = "us-east1"
+        location = "europe-west1"
       }
     }
   }
