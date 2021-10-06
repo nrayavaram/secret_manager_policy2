@@ -3,10 +3,10 @@ provider "google" {
 }
 
 resource "google_secret_manager_secret" "secret-basic" {
-  secret_id = "secret-wf-google"
+  secret_id = "secret-wf-google-tf"
 
   labels = {
-    label = "my-label"
+    label = "my-label2"
   }
 
   replication {
