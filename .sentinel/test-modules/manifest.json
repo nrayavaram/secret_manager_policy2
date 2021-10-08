@@ -1,0 +1,16 @@
+{
+	"records": [
+		{
+			"key": "test/google_secret_manager_secret/fail/tfplan-functions",
+			"source": "../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/nrayavaram/secret_manager_policy2/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/google_secret_manager_secret/pass/tfplan-functions",
+			"source": "../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/nrayavaram/secret_manager_policy2/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		}
+	]
+}

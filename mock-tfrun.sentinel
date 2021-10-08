@@ -1,0 +1,37 @@
+id = "run-GyVEMh4gdsiDPpSR"
+created_at = "2021-10-08T05:48:28.278Z"
+message = "Triggered via UI"
+commit_sha = "546a9f69c6dfa51b64df1e6e87ce1ca1265671e3"
+speculative = false
+is_destroy = false
+refresh = true
+refresh_only = false
+replace_addrs = null
+target_addrs = null
+
+variables = {
+	"access_token": {
+		"category":  "terraform",
+		"sensitive": true,
+	},
+}
+
+organization = {
+	"name": "ashwinknaik",
+}
+
+workspace = {
+	"auto_apply":  false,
+	"created_at":  "2021-10-06T07:03:58.242Z",
+	"description": null,
+	"id":          "ws-QyEWyGG4iu7J3NSc",
+	"name":        "secret_manager_policy2",
+	"tags":        [],
+	"vcs_repo": {
+		"branch":             "",
+		"display_identifier": "nrayavaram/secret_manager_policy2",
+		"identifier":         "nrayavaram/secret_manager_policy2",
+		"ingress_submodules": false,
+	},
+	"working_directory": "",
+}

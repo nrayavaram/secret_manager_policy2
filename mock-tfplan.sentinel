@@ -1,0 +1,202 @@
+import "strings"
+import "types"
+
+_modules = {
+	"root": {
+		"data": {},
+		"path": [],
+		"resources": {
+			"google_secret_manager_secret": {
+				"secret-basic": {
+					0: {
+						"applied": {
+							"labels": {
+								"label": "my-label",
+							},
+							"replication": [
+								{
+									"automatic": null,
+									"user_managed": [
+										{
+											"replicas": [
+												{
+													"customer_managed_encryption": [],
+													"location":                    "us-central1",
+												},
+												{
+													"customer_managed_encryption": [],
+													"location":                    "us-east1",
+												},
+											],
+										},
+									],
+								},
+							],
+							"rotation":  [],
+							"secret_id": "secret-wf-google",
+							"timeouts":  null,
+							"topics":    [],
+							"ttl":       null,
+						},
+						"destroy": true,
+						"diff": {
+							"create_time": {
+								"computed": true,
+								"new":      "",
+								"old":      "2021-10-06T08:43:43.022390Z",
+							},
+							"expire_time": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "projects/manifest-access-320809/secrets/secret-wf-google-tf",
+							},
+							"labels.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "1",
+							},
+							"labels.label": {
+								"computed": false,
+								"new":      "my-label",
+								"old":      "my-label2",
+							},
+							"name": {
+								"computed": true,
+								"new":      "",
+								"old":      "projects/360087009916/secrets/secret-wf-google-tf",
+							},
+							"project": {
+								"computed": true,
+								"new":      "",
+								"old":      "manifest-access-320809",
+							},
+							"replication.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "1",
+							},
+							"replication.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "2",
+							},
+							"replication.0.automatic": {
+								"computed": false,
+								"new":      "",
+								"old":      "false",
+							},
+							"replication.0.user_managed.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "1",
+							},
+							"replication.0.user_managed.0.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "1",
+							},
+							"replication.0.user_managed.0.replicas.#": {
+								"computed": false,
+								"new":      "2",
+								"old":      "2",
+							},
+							"replication.0.user_managed.0.replicas.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "2",
+							},
+							"replication.0.user_managed.0.replicas.0.customer_managed_encryption.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "0",
+							},
+							"replication.0.user_managed.0.replicas.0.location": {
+								"computed": false,
+								"new":      "us-central1",
+								"old":      "us-central1",
+							},
+							"replication.0.user_managed.0.replicas.1.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "2",
+							},
+							"replication.0.user_managed.0.replicas.1.customer_managed_encryption.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "0",
+							},
+							"replication.0.user_managed.0.replicas.1.location": {
+								"computed": false,
+								"new":      "us-east1",
+								"old":      "europe-west1",
+							},
+							"rotation.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "0",
+							},
+							"secret_id": {
+								"computed": false,
+								"new":      "secret-wf-google",
+								"old":      "secret-wf-google-tf",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"topics.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "0",
+							},
+							"ttl": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": true,
+					},
+				},
+			},
+		},
+	},
+}
+
+module_paths = [
+	[],
+]
+
+terraform_version = "1.0.8"
+
+variables = {
+	"access_token": "REDACTED_SENSITIVE",
+}
+
+module = func(path) {
+	if types.type_of(path) is not "list" {
+		error("expected list, got", types.type_of(path))
+	}
+
+	if length(path) < 1 {
+		return _modules.root
+	}
+
+	addr = []
+	for path as p {
+		append(addr, "module")
+		append(addr, p)
+	}
+
+	return _modules[strings.join(addr, ".")]
+}
+
+data = _modules.root.data
+path = _modules.root.path
+resources = _modules.root.resources

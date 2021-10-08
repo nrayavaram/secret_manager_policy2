@@ -1,0 +1,122 @@
+import "strings"
+import "types"
+
+_modules = {
+	"root": {
+		"data":    {},
+		"modules": {},
+		"outputs": {},
+		"providers": {
+			"google": {
+				"alias": {
+					"": {
+						"config": {
+							"project": "manifest-access-320809",
+						},
+						"references": {
+							"access_token": [
+								"var.access_token",
+							],
+							"project": [],
+						},
+						"version": "",
+					},
+				},
+				"config": {
+					"project": "manifest-access-320809",
+				},
+				"references": {
+					"access_token": [
+						"var.access_token",
+					],
+					"project": [],
+				},
+				"version": "",
+			},
+		},
+		"resources": {
+			"google_secret_manager_secret": {
+				"secret-basic": {
+					"config": {
+						"labels": {
+							"label": "my-label",
+						},
+						"replication": [
+							{
+								"user_managed": [
+									{
+										"replicas": [
+											{
+												"location": "us-central1",
+											},
+											{
+												"location": "us-east1",
+											},
+										],
+									},
+								],
+							},
+						],
+						"secret_id": "secret-wf-google",
+					},
+					"provisioners": null,
+					"references": {
+						"labels": [],
+						"replication": [
+							{
+								"user_managed": [
+									{
+										"replicas": [
+											{
+												"location": [],
+											},
+											{
+												"location": [],
+											},
+										],
+									},
+								],
+							},
+						],
+						"secret_id": [],
+					},
+				},
+			},
+		},
+		"variables": {
+			"access_token": {
+				"default":     null,
+				"description": "access token",
+			},
+		},
+	},
+}
+
+module_paths = [
+	[],
+]
+
+module = func(path) {
+	if types.type_of(path) is not "list" {
+		error("expected list, got", types.type_of(path))
+	}
+
+	if length(path) < 1 {
+		return _modules.root
+	}
+
+	addr = []
+	for path as p {
+		append(addr, "module")
+		append(addr, p)
+	}
+
+	return _modules[strings.join(addr, ".")]
+}
+
+data = _modules.root.data
+modules = _modules.root.modules
+providers = _modules.root.providers
+resources = _modules.root.resources
+variables = _modules.root.variables
+outputs = _modules.root.outputs

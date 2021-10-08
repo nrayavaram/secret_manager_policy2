@@ -1,0 +1,523 @@
+terraform_version = "1.0.8"
+
+planned_values = {
+	"outputs": {},
+	"resources": {
+		"google_secret_manager_secret.secret-basic": {
+			"address":        "google_secret_manager_secret.secret-basic",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "secret-basic",
+			"provider_name":  "registry.terraform.io/hashicorp/google",
+			"tainted":        false,
+			"type":           "google_secret_manager_secret",
+			"values": {
+				"labels": {
+					"label": "my-label",
+				},
+				"replication": [
+					{
+						"automatic": null,
+						"user_managed": [
+							{
+								"replicas": [
+									{
+										"customer_managed_encryption": [],
+										"location":                    "us-central1",
+									},
+									{
+										"customer_managed_encryption": [],
+										"location":                    "us-east1",
+									},
+								],
+							},
+						],
+					},
+				],
+				"rotation":  [],
+				"secret_id": "secret-wf-google",
+				"timeouts":  null,
+				"topics":    [],
+				"ttl":       null,
+			},
+		},
+	},
+}
+
+variables = {
+	"access_token": {
+		"name":  "access_token",
+		"value": "REDACTED_SENSITIVE",
+	},
+}
+
+resource_changes = {
+	"google_secret_manager_secret.secret-basic": {
+		"address": "google_secret_manager_secret.secret-basic",
+		"change": {
+			"actions": [
+				"delete",
+				"create",
+			],
+			"after": {
+				"labels": {
+					"label": "my-label",
+				},
+				"replication": [
+					{
+						"automatic": null,
+						"user_managed": [
+							{
+								"replicas": [
+									{
+										"customer_managed_encryption": [],
+										"location":                    "us-central1",
+									},
+									{
+										"customer_managed_encryption": [],
+										"location":                    "us-east1",
+									},
+								],
+							},
+						],
+					},
+				],
+				"rotation":  [],
+				"secret_id": "secret-wf-google",
+				"timeouts":  null,
+				"topics":    [],
+				"ttl":       null,
+			},
+			"after_unknown": {
+				"create_time": true,
+				"expire_time": true,
+				"id":          true,
+				"labels":      {},
+				"name":        true,
+				"project":     true,
+				"replication": [
+					{
+						"user_managed": [
+							{
+								"replicas": [
+									{
+										"customer_managed_encryption": [],
+									},
+									{
+										"customer_managed_encryption": [],
+									},
+								],
+							},
+						],
+					},
+				],
+				"rotation": [],
+				"topics":   [],
+			},
+			"before": {
+				"create_time": "2021-10-06T08:43:43.022390Z",
+				"expire_time": "",
+				"id":          "projects/manifest-access-320809/secrets/secret-wf-google-tf",
+				"labels": {
+					"label": "my-label2",
+				},
+				"name":    "projects/360087009916/secrets/secret-wf-google-tf",
+				"project": "manifest-access-320809",
+				"replication": [
+					{
+						"automatic": false,
+						"user_managed": [
+							{
+								"replicas": [
+									{
+										"customer_managed_encryption": [],
+										"location":                    "us-central1",
+									},
+									{
+										"customer_managed_encryption": [],
+										"location":                    "europe-west1",
+									},
+								],
+							},
+						],
+					},
+				],
+				"rotation":  [],
+				"secret_id": "secret-wf-google-tf",
+				"timeouts":  null,
+				"topics":    [],
+				"ttl":       null,
+			},
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "secret-basic",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"type":           "google_secret_manager_secret",
+	},
+}
+
+output_changes = {}
+
+raw = {
+	"configuration": {
+		"provider_config": {
+			"google": {
+				"expressions": {
+					"access_token": {
+						"references": [
+							"var.access_token",
+						],
+					},
+					"project": {
+						"constant_value": "manifest-access-320809",
+					},
+				},
+				"name": "google",
+			},
+		},
+		"root_module": {
+			"resources": [
+				{
+					"address": "google_secret_manager_secret.secret-basic",
+					"expressions": {
+						"labels": {
+							"constant_value": {
+								"label": "my-label",
+							},
+						},
+						"replication": [
+							{
+								"user_managed": [
+									{
+										"replicas": [
+											{
+												"location": {
+													"constant_value": "us-central1",
+												},
+											},
+											{
+												"location": {
+													"constant_value": "us-east1",
+												},
+											},
+										],
+									},
+								],
+							},
+						],
+						"secret_id": {
+							"constant_value": "secret-wf-google",
+						},
+					},
+					"mode":                "managed",
+					"name":                "secret-basic",
+					"provider_config_key": "google",
+					"schema_version":      0,
+					"type":                "google_secret_manager_secret",
+				},
+			],
+			"variables": {
+				"access_token": {
+					"description": "access token",
+					"sensitive":   true,
+				},
+			},
+		},
+	},
+	"format_version": "0.2",
+	"planned_values": {
+		"root_module": {
+			"resources": [
+				{
+					"address":        "google_secret_manager_secret.secret-basic",
+					"mode":           "managed",
+					"name":           "secret-basic",
+					"provider_name":  "registry.terraform.io/hashicorp/google",
+					"schema_version": 0,
+					"sensitive_values": {
+						"labels": {},
+						"replication": [
+							{
+								"user_managed": [
+									{
+										"replicas": [
+											{
+												"customer_managed_encryption": [],
+											},
+											{
+												"customer_managed_encryption": [],
+											},
+										],
+									},
+								],
+							},
+						],
+						"rotation": [],
+						"topics":   [],
+					},
+					"type": "google_secret_manager_secret",
+					"values": {
+						"labels": {
+							"label": "my-label",
+						},
+						"replication": [
+							{
+								"automatic": null,
+								"user_managed": [
+									{
+										"replicas": [
+											{
+												"customer_managed_encryption": [],
+												"location":                    "us-central1",
+											},
+											{
+												"customer_managed_encryption": [],
+												"location":                    "us-east1",
+											},
+										],
+									},
+								],
+							},
+						],
+						"rotation":  [],
+						"secret_id": "secret-wf-google",
+						"timeouts":  null,
+						"topics":    [],
+						"ttl":       null,
+					},
+				},
+			],
+		},
+	},
+	"prior_state": {
+		"format_version":    "0.2",
+		"terraform_version": "1.0.8",
+		"values": {
+			"root_module": {
+				"resources": [
+					{
+						"address":        "google_secret_manager_secret.secret-basic",
+						"mode":           "managed",
+						"name":           "secret-basic",
+						"provider_name":  "registry.terraform.io/hashicorp/google",
+						"schema_version": 0,
+						"sensitive_values": {
+							"labels": {},
+							"replication": [
+								{
+									"user_managed": [
+										{
+											"replicas": [
+												{
+													"customer_managed_encryption": [],
+												},
+												{
+													"customer_managed_encryption": [],
+												},
+											],
+										},
+									],
+								},
+							],
+							"rotation": [],
+							"topics":   [],
+						},
+						"type": "google_secret_manager_secret",
+						"values": {
+							"create_time": "2021-10-06T08:43:43.022390Z",
+							"expire_time": "",
+							"id":          "projects/manifest-access-320809/secrets/secret-wf-google-tf",
+							"labels": {
+								"label": "my-label2",
+							},
+							"name":    "projects/360087009916/secrets/secret-wf-google-tf",
+							"project": "manifest-access-320809",
+							"replication": [
+								{
+									"automatic": false,
+									"user_managed": [
+										{
+											"replicas": [
+												{
+													"customer_managed_encryption": [],
+													"location":                    "us-central1",
+												},
+												{
+													"customer_managed_encryption": [],
+													"location":                    "europe-west1",
+												},
+											],
+										},
+									],
+								},
+							],
+							"rotation":  [],
+							"secret_id": "secret-wf-google-tf",
+							"timeouts":  null,
+							"topics":    [],
+							"ttl":       null,
+						},
+					},
+				],
+			},
+		},
+	},
+	"resource_changes": [
+		{
+			"address": "google_secret_manager_secret.secret-basic",
+			"change": {
+				"actions": [
+					"delete",
+					"create",
+				],
+				"after": {
+					"labels": {
+						"label": "my-label",
+					},
+					"replication": [
+						{
+							"automatic": null,
+							"user_managed": [
+								{
+									"replicas": [
+										{
+											"customer_managed_encryption": [],
+											"location":                    "us-central1",
+										},
+										{
+											"customer_managed_encryption": [],
+											"location":                    "us-east1",
+										},
+									],
+								},
+							],
+						},
+					],
+					"rotation":  [],
+					"secret_id": "secret-wf-google",
+					"timeouts":  null,
+					"topics":    [],
+					"ttl":       null,
+				},
+				"after_sensitive": {
+					"labels": {},
+					"replication": [
+						{
+							"user_managed": [
+								{
+									"replicas": [
+										{
+											"customer_managed_encryption": [],
+										},
+										{
+											"customer_managed_encryption": [],
+										},
+									],
+								},
+							],
+						},
+					],
+					"rotation": [],
+					"topics":   [],
+				},
+				"after_unknown": {
+					"create_time": true,
+					"expire_time": true,
+					"id":          true,
+					"labels":      {},
+					"name":        true,
+					"project":     true,
+					"replication": [
+						{
+							"user_managed": [
+								{
+									"replicas": [
+										{
+											"customer_managed_encryption": [],
+										},
+										{
+											"customer_managed_encryption": [],
+										},
+									],
+								},
+							],
+						},
+					],
+					"rotation": [],
+					"topics":   [],
+				},
+				"before": {
+					"create_time": "2021-10-06T08:43:43.022390Z",
+					"expire_time": "",
+					"id":          "projects/manifest-access-320809/secrets/secret-wf-google-tf",
+					"labels": {
+						"label": "my-label2",
+					},
+					"name":    "projects/360087009916/secrets/secret-wf-google-tf",
+					"project": "manifest-access-320809",
+					"replication": [
+						{
+							"automatic": false,
+							"user_managed": [
+								{
+									"replicas": [
+										{
+											"customer_managed_encryption": [],
+											"location":                    "us-central1",
+										},
+										{
+											"customer_managed_encryption": [],
+											"location":                    "europe-west1",
+										},
+									],
+								},
+							],
+						},
+					],
+					"rotation":  [],
+					"secret_id": "secret-wf-google-tf",
+					"timeouts":  null,
+					"topics":    [],
+					"ttl":       null,
+				},
+				"before_sensitive": {
+					"labels": {},
+					"replication": [
+						{
+							"user_managed": [
+								{
+									"replicas": [
+										{
+											"customer_managed_encryption": [],
+										},
+										{
+											"customer_managed_encryption": [],
+										},
+									],
+								},
+							],
+						},
+					],
+					"rotation": [],
+					"topics":   [],
+				},
+			},
+			"mode":          "managed",
+			"name":          "secret-basic",
+			"provider_name": "registry.terraform.io/hashicorp/google",
+			"type":          "google_secret_manager_secret",
+		},
+	],
+	"terraform_version": "1.0.8",
+	"variables": {
+		"access_token": {
+			"value": "REDACTED_SENSITIVE",
+		},
+	},
+}

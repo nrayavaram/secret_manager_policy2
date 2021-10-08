@@ -1,0 +1,52 @@
+terraform_version = "1.0.8"
+
+outputs = {}
+
+resources = {
+	"google_secret_manager_secret.secret-basic": {
+		"address":        "google_secret_manager_secret.secret-basic",
+		"depends_on":     [],
+		"deposed_key":    "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "secret-basic",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"tainted":        false,
+		"type":           "google_secret_manager_secret",
+		"values": {
+			"create_time": "2021-10-06T08:43:43.022390Z",
+			"expire_time": "",
+			"id":          "projects/manifest-access-320809/secrets/secret-wf-google-tf",
+			"labels": {
+				"label": "my-label2",
+			},
+			"name":    "projects/360087009916/secrets/secret-wf-google-tf",
+			"project": "manifest-access-320809",
+			"replication": [
+				{
+					"automatic": false,
+					"user_managed": [
+						{
+							"replicas": [
+								{
+									"customer_managed_encryption": [],
+									"location":                    "us-central1",
+								},
+								{
+									"customer_managed_encryption": [],
+									"location":                    "europe-west1",
+								},
+							],
+						},
+					],
+				},
+			],
+			"rotation":  [],
+			"secret_id": "secret-wf-google-tf",
+			"timeouts":  null,
+			"topics":    [],
+			"ttl":       null,
+		},
+	},
+}
