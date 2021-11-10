@@ -53,7 +53,7 @@ Steps to follow :
 4.run the test file using the command "sentinel apply -trace policy_name"
 5.maintain the test folder with test cases files like   "pass.hcl","fail.hcl","null.hcl"
 6.run the test cases using the command "sentinel test policy_name"
-7.make the test cases should be pass
+7.make the test cases should be pass.
 
 
 
