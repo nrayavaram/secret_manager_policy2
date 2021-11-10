@@ -51,8 +51,12 @@ Steps to follow :
 2..Generate the mocks using terraform code.
 3.write the policy based on resourses section in mock-tfplan-v2.sentinel file.
 4.run the test file using the command "sentinel apply -trace policy_name"
-5.maintain the test folder with test cases files like   "pass.hcl","fail.hcl","null.hcl"
-6.run the test cases using the command "sentinel test policy_name"
+5.maintain the test folder with test cases files
+6.run the test cases using the command
+example :sentinel test google_secret_manager_secret.sentinel PASS - google_secret_manager_secret.sentinel
+PASS - test/google_secret_manager_secret/fail.hcl
+PASS - test/google_secret_manager_secret/null.hcl
+PASS - test/google_secret_manager_secret/pass.hcl
 7.make the test cases should be pass.
 
 
