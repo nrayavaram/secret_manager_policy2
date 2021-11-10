@@ -1,17 +1,41 @@
 # Secret_Manager_policies
 
 
+**Sentinel file "google_secret_manager_secret.sentinel" is having code to deploy the policies. In order to check the location is US or other than US, We need to validate  policy successfully.**
+
+1.Ensure the location is  valid or not.
+
+Used Variables :
+----------------
+prefix: It is being used locally to have information of valid location.
+messages: It is being used to hold the complete message of policies violation to show to the user.
+
+Used Maps :
+-----------
+allResources: This is the map, being used to map the all resourses regarding to "Secret manager".
+
+
+Used Methods:
+-------------
+is_valid_location: This function is being used to validate the value of parameter "Location". As per the policy, its value needs to be prefix with "US-". It can not be empty/null. If the policy won't be validated successfully, it will generate appropriate message to show the users. This function will have below 2-parameters:
+
+Parameters
+location => The key inside of resource_changes section for particular GCP Resource in tfplan mock
+valid_location_prefix => The value of location key inside of resource_changes section for particular GCP Resource in tfplan mock
+
+control statements: here we are looping and assigning the all the resourses into two parameters 
+address => The key inside of resource_changes section for particular GCP Resource in tfplan mock
+rc => The value of address key inside of resource_changes section for particular GCP Resource in tfplan mock
+
+condition: if condition is comparing the value of location with prefix variable. if both are equal the policy will be true else it will generate appropriate message to show the users.
+
+
 **Terraform version**
 Terraform v1.0.7
 
 **sentinel versions**
 Sentinel v0.18.4
 
-What is sentinel :
-------------------
-One of the most important features of Terraform Cloud (TFC) and Terraform Enterprise (TFE) (the self-hosted implementation of Terraform Cloud) is Sentinel, which lets you implement governance policies as code. Sentinel policies are checked between the plan and apply stages of runs in TFC and TFE.
-
-**Purpose** : the purpose of this policy is checking weather location is "US" or other location
 
 input files :
 --------------
