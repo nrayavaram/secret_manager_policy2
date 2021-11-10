@@ -3,7 +3,7 @@
 
 **Sentinel file "google_secret_manager_secret.sentinel" is having code to deploy the policies. In order to check the location is US or other than US, We need to validate  policy successfully.**
 
-1.Ensure the location is  valid or not.
+1.the purpose of this policy is to validate the value of the location.
 
 Used Variables :
 ----------------
@@ -37,13 +37,6 @@ Terraform v1.0.7
 Sentinel v0.18.4
 
 
-input files :
---------------
-1.mock-tfplan-v2.sentinel
-2.mock-tfstate-v2.sentinel
-3.mock-tfconfig-v2.sentinel
-4.mock-tfrun.sentinel
-5.sentinel.hcl
 
 modules to import:
 ------------------
