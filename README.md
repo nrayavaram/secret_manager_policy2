@@ -41,19 +41,23 @@ Sentinel v0.18.4
 
 modules to import:
 ------------------
-import "tfplan-functions"
-import "strings"
-import "types"
+* import "tfplan-functions"
+* import "strings"
+* import "types"
 
 
 Testing a Policy
 sentinel test <sentinel file>
 
 example :
-$  sentinel test google_secret_manager_secret.sentinel 
+$  sentinel test google_secret_manager_secret.sentinel
+
   PASS - google_secret_manager_secret.sentinel
+
   PASS - test/google_secret_manager_secret/fail.hcl
+
   PASS - test/google_secret_manager_secret/null.hcl
+  
   PASS - test/google_secret_manager_secret/pass.hcl
 
 
