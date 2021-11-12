@@ -48,8 +48,8 @@ modules to import:
 * import "types"
 
 
-Testing a Policy
-sentinel test <sentinel file>
+#### Testing a Policy
+     sentinel test <sentinel file>
 
 example :
 $  sentinel test google_secret_manager_secret.sentinel
