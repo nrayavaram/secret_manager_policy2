@@ -1,11 +1,11 @@
 # Secret_Manager_policies
 
 
-###Sentinel file "google_secret_manager_secret.sentinel" is having code to deploy the policies. In order to check the location is US or other than US, We need to validate  policy successfully.**
+### Sentinel file "google_secret_manager_secret.sentinel" is having code to deploy the policies. In order to check the location is US or other than US, We need to validate  policy successfully.**
 
 * the purpose of this policy is to validate the value of the location.
 
-####Variables :
+#### Variables :
 
 * prefix: It is being used locally to have information of valid location.
 * messages: It is being used to hold the complete message of policies violation to show to the user.
