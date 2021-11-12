@@ -33,11 +33,11 @@ Parameters
 * if condition is comparing the value of location with prefix variable. if both are equal the policy will be true else it will generate appropriate message to show the users.
 
 
-**Terraform version**
-Terraform v1.0.7
+#### Terraform version
+* Terraform v1.0.7
 
-**sentinel versions**
-Sentinel v0.18.4
+#### sentinel versions
+* Sentinel v0.18.4
 
 
 
