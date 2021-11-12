@@ -22,7 +22,7 @@ Parameters
 * valid_location_prefix => The value of location key inside of resource_changes section for particular GCP Resource in tfplan mock
 
 #### control statements: 
-* here we are looping and assigning the all the resourses into two parameters 
+* here we are iterating and assigning the all the resourses into two parameters 
     * Parameters
       |Name|Description|
       |----|-----|
