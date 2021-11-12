@@ -10,12 +10,10 @@
 prefix: It is being used locally to have information of valid location.
 messages: It is being used to hold the complete message of policies violation to show to the user.
 
-####Maps :
+#### methods :
 
-allResources: This is the map, being used to map the all resourses regarding to "Secret manager".
+allResources: This is the function, being used to get the all resourses regarding to "Secret manager".
 
-
-####Methods:
 
 is_valid_location: This function is being used to validate the value of parameter "Location". As per the policy, its value needs to be prefix with "US-". It can not be empty/null. If the policy won't be validated successfully, it will generate appropriate message to show the users. This function will have below 2-parameters:
 
